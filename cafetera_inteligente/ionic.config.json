@@ -1,0 +1,8 @@
+{
+  "name": "cafetera_inteligente",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Formulario</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="saveData()" #registerForm="ngForm">
+    <ion-list>
+
+      <ion-item>
+        <ion-icon name="person" item-start></ion-icon>
+        <ion-label stacked>Nombres:</ion-label>
+        <ion-input type="text" name="nombres"  [(ngModel)]="usuario.nombres" placeholder="Nombres" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person" item-start></ion-icon>
+        <ion-label stacked>Apellidos:</ion-label>
+        <ion-input name="apellidos" type="text" [(ngModel)]="usuario.apellidos" placeholder="Apellidos" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person" item-start></ion-icon>
+        <ion-label stacked>Login:</ion-label>
+        <ion-input name="login" type="text" [(ngModel)]="usuario.login" placeholder="Login" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="eye" item-start></ion-icon>
+        <ion-label stacked>Contraseña:</ion-label>
+        <ion-input name="password" type="password" [(ngModel)]="usuario.password" placeholder="Contraseña" required></ion-input>
+      </ion-item>
+      <div padding>
+          <button ion-button block type="submit" [disabled]="!registerForm.form.valid">Guardar</button>
+      </div>
+
+    </ion-list>
+
+  </form>
+</ion-content>
